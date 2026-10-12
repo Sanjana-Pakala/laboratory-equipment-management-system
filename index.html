@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratory Timetable Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">🧪</div>
+
+        <div>
+
+            <h1>Laboratory Timetable</h1>
+
+            <p>Laboratory Timetable Management System</p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Main Content -->
+
+    <main>
+
+
+        <!-- Room Selection -->
+
+        <section class="room-section">
+
+            <h2>Select Class / Room</h2>
+
+
+            <div class="room-buttons">
+
+
+                <button
+                    id="room3005Btn"
+                    class="room-btn active"
+                    onclick="selectRoom('3005')">
+
+                    Room 3005 - IT-A
+
+                </button>
+
+
+                <button
+                    id="room3006Btn"
+                    class="room-btn"
+                    onclick="selectRoom('3006')">
+
+                    Room 3006 - IT-B
+
+                </button>
+
+
+                <button
+                    id="room3011Btn"
+                    class="room-btn"
+                    onclick="selectRoom('3011')">
+
+                    Room 3011 - IT-C
+
+                </button>
+
+
+            </div>
+
+
+            <p id="selectedRoomText">
+
+                Currently viewing: Room 3005 - IT-A
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Current Status -->
+
+        <section class="status-section">
+
+
+            <div class="status-card">
+
+                <h3>Currently Running</h3>
+
+                <p id="currentActivity">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+
+
+            <div class="status-card">
+
+                <h3>Next</h3>
+
+                <p id="nextActivity">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+
+
+            <div class="status-card">
+
+                <h3>Time Remaining</h3>
+
+                <p id="timeRemaining">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Day Selection -->
+
+        <section class="day-section">
+
+
+            <h2>Select Day</h2>
+
+
+            <div class="day-buttons">
+
+
+                <button
+                    onclick="showDay('Monday')"
+                    id="MondayBtn">
+
+                    Monday
+
+                </button>
+
+
+                <button
+                    onclick="showDay('Tuesday')"
+                    id="TuesdayBtn">
+
+                    Tuesday
+
+                </button>
+
+
+                <button
+                    onclick="showDay('Wednesday')"
+                    id="WednesdayBtn">
+
+                    Wednesday
+
+                </button>
+
+
+                <button
+                    onclick="showDay('Thursday')"
+                    id="ThursdayBtn">
+
+                    Thursday
+
+                </button>
+
+
+                <button
+                    onclick="showDay('Friday')"
+                    id="FridayBtn">
+
+                    Friday
+
+                </button>
+
+
+                <button
+                    onclick="showDay('Saturday')"
+                    id="SaturdayBtn">
+
+                    Saturday
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TIMETABLE + LABORATORY SIDE SECTION -->
+
+        <section class="content-wrapper">
+
+
+            <!-- Full Timetable -->
+
+            <section class="timetable-section">
+
+
+                <div class="timetable-heading">
+
+                    <h2 id="selectedDayTitle">
+
+                        Monday Timetable
+
+                    </h2>
+
+
+                    <p id="roomTitle">
+
+                        Room 3005 - IT-A
+
+                    </p>
+
+                </div>
+
+
+                <div id="scheduleContainer">
+
+                    <!-- Full timetable will be displayed using JavaScript -->
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- Laboratory Schedule -->
+
+            <aside class="lab-section">
+
+
+                <div class="lab-heading">
+
+                    <h2>🧪 Laboratory Schedule</h2>
+
+                    <p id="labRoomTitle">
+
+                        IT-A Laboratory Sessions
+
+                    </p>
+
+                </div>
+
+
+                
+<div id="labScheduleContainer">
+    <!-- Laboratory schedule -->
+</div>
+
+<!-- Free Laboratory Availability -->
+<div class="free-lab-section">
+    <h3>🟢 Free Laboratories</h3>
+    <p id="freeLabDayTitle">Monday Lab Availability</p>
+    <div id="freeLabContainer">
+        <!-- Free laboratories appear here -->
+    </div>
+</div>
+
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    
+
+    <footer>
+
+
+        <p>
+
+            Laboratory Timetable Management System
+
+        </p>
+
+
+        <p>
+
+            Academic Year 2026-2027
+
+        </p>
+
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
